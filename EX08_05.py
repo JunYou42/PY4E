@@ -16,10 +16,10 @@ fh = open(fname)
 count = 0
 
 for line in fh:
-    line = line.rstrip()
-    if not line.startswith('From'): continue
+#    line = line.rstrip()
+    if not line.startswith('From'): continue # 也充当了过滤空白行的角色，重要！！！不可删！！！
     words = line.split()
-    if not words[0]=='From': continue
+    if not words[0]=='From': continue # or------> if words[0]!='From': continue
     word = words[1]
     print(word)
 #    name = word.split('@') ### to print all the name before @ in the mail addreass
